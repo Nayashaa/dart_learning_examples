@@ -1,5 +1,11 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
+
+// Streams with listen to
+//streams with async*
+//Streams with stream constructors.
+
 Stream<int> myStream() async* {}
 
 Stream<int> generateRandomNumbers() async* {
@@ -16,3 +22,24 @@ Stream<int> generateRandomNumberstTwo() async* {
 Stream<int> tick({required int ticks}) {
   return Stream.periodic(const Duration(seconds: 1), (x) => ticks - x - 1).take(ticks);
 }
+
+Stream<int> countDown() async* {
+  for (var i = 5; i > -1; i--) {
+    await Future.delayed(Duration(seconds: 1));
+    yield i;
+  }
+}
+
+/// dont remmeber how to handle a stream. 
+
+
+// Future<Stream<Widget>> widgetStream() async {
+//   print(widgetStream());
+//   List<Widget> widgetList = [];
+//   for (var i = 0; i < 5; i++) {
+//     widgetList.add(Container(
+//       child: Text("ha"),
+//     ));
+//   }
+//   return await Future.delayed(Duration(seconds: 1));
+// }

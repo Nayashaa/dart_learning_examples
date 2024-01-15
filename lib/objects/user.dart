@@ -46,6 +46,20 @@ class BlockedUser extends User {
   bool get isActive => false;
 }
 
+class BlockedUser1 extends User {
+  final Blocked template;
+  final String description;
+
+  // Use Blocked() as the default value for template
+  BlockedUser1({Blocked? template, required String name})
+      : template = template ?? Blocked(),
+        description = (template ?? Blocked()).title,
+        super(name: '');
+
+  @override
+  bool get isActive => false;
+}
+
 //two different types of calling to the super!
 
 
