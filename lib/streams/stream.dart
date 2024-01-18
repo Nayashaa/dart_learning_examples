@@ -28,27 +28,35 @@ Stream<int> countDown() async* {
   }
 }
 
+Stream<int> countUp() async* {
+  for (var i = 0; i < 5; i++) {
+    await Future.delayed(Duration(seconds: 1));
+    yield i;
+  }
+}
+
 Stream<int> generateNumbers() async* {
   while (true) {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     yield 1;
   }
 }
 
 Stream<int> generateNumbers2() async* {
-  yield* Stream.periodic(Duration(seconds: 1), (count) => 1);
+  yield* Stream.periodic(const Duration(seconds: 1), (count) => 1);
 }
 
-/// dont remmeber how to handle a stream. 
+/// Futures:
+///
+///
 
+Future<String> fetchSomeData() async {
+  // Some asynchronous operation, e.g., fetching data from a server
+  await Future.delayed(Duration(seconds: 2));
+  return "dude";
+}
 
-// Future<Stream<Widget>> widgetStream() async {
-//   print(widgetStream());
-//   List<Widget> widgetList = [];
-//   for (var i = 0; i < 5; i++) {
-//     widgetList.add(Container(
-//       child: Text("ha"),
-//     ));
-//   }
-//   return await Future.delayed(Duration(seconds: 1));
-// }
+Future<String> writeAString() async {
+  await Future.delayed(Duration(seconds: 5));
+  return "I am a string that is written";
+}
