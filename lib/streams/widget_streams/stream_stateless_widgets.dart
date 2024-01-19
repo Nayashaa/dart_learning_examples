@@ -51,13 +51,13 @@ class CountUpWidget extends StatelessWidget {
         stream: countUp(),
         builder: (context, snapshot) {
           if (snapshot.data == 0) {
-            return Text("Starting count! ");
+            return const Text("Starting count! ");
           } else if (snapshot.hasData) {
             return Text("The count is : ${snapshot.data}");
           } else if (snapshot.hasError) {
             return Text('Error: ${snapshot.error}');
           } else {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
         });
   }
@@ -78,14 +78,32 @@ class FutureBuilderExample extends StatelessWidget {
           } else if (snapshot.hasError) {
             return Text("oh no theres an error ${snapshot.error}");
           } else {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
         });
   }
 }
 
+// class MyWidget extends StatelessWidget {
+//   const MyWidget({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder();
+//   }
+// }
+
+// class MyWidget extends StatelessWidget {
+//   const MyWidget({Key? myWidgetKey}) : super(key: myWidgetKey);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder();
+//   }
+// }
+
 class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+  const MyWidget({Key? myWidgetKey}) : super(key: myWidgetKey);
 
   @override
   Widget build(BuildContext context) {

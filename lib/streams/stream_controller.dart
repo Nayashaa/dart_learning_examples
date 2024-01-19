@@ -28,7 +28,7 @@ void streamControllerExample() {
   poopypants.sink.add("Karina");
   poopypants.sink.add("Monk");
 
-  Future.delayed(Duration(seconds: 5), (() {
+  Future.delayed(const Duration(seconds: 5), (() {
     diffSubcriptionName.cancel();
   }));
 

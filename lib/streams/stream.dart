@@ -30,7 +30,7 @@ Stream<int> countDown() async* {
 
 Stream<int> countUp() async* {
   for (var i = 0; i < 5; i++) {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     yield i;
   }
 }
@@ -52,11 +52,11 @@ Stream<int> generateNumbers2() async* {
 
 Future<String> fetchSomeData() async {
   // Some asynchronous operation, e.g., fetching data from a server
-  await Future.delayed(Duration(seconds: 2));
+  await Future.delayed(const Duration(seconds: 2));
   return "dude";
 }
 
 Future<String> writeAString() async {
-  await Future.delayed(Duration(seconds: 5));
+  await Future.delayed(const Duration(seconds: 5));
   return "I am a string that is written";
 }

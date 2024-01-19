@@ -1,8 +1,7 @@
 import 'dart:async';
 
-import 'package:dart_learning_examples/iterables/iterables.dart';
-import 'package:dart_learning_examples/objects/person.dart';
-import 'package:dart_learning_examples/objects/user.dart';
+import 'package:dart_learning_examples/classes/person.dart';
+import 'package:dart_learning_examples/classes/user.dart';
 import 'package:dart_learning_examples/streams/stream.dart';
 
 void printName() {
@@ -22,7 +21,7 @@ void generateNumbersFunction() {
     },
   );
 
-  Future.delayed(Duration(seconds: 5), () {
+  Future.delayed(const Duration(seconds: 5), () {
     // Cancel the subscription after 2 seconds
     subscription.cancel();
   });

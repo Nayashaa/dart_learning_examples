@@ -1,8 +1,6 @@
-import 'dart:async';
-import 'package:dart_learning_examples/objects/user.dart';
+import 'package:dart_learning_examples/classes/user.dart';
 import 'package:dart_learning_examples/streams/stream.dart';
 import 'package:dart_learning_examples/streams/stream_controller.dart';
-import 'package:dart_learning_examples/streams/stream_init_functions.dart';
 import 'package:dart_learning_examples/streams/widget_streams/stream_stateful_widgets.dart';
 import 'package:dart_learning_examples/streams/widget_streams/stream_stateless_widgets.dart';
 import 'package:flutter/material.dart';
@@ -31,12 +29,15 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Text(BlockedUser(template: Blocked(), name: "user").description),
-              OneGeneratorWidget(),
+              const OneGeneratorWidget(),
               CountDownWidget(),
-              CountUpWidget(),
+              const CountUpWidget(),
               FutureBuilderExample(
                 passedFuture: writeAString(),
               ),
+              MyWidget(
+                myWidgetKey: UniqueKey(),
+              )
             ],
           ),
         ),
