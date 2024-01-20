@@ -1,3 +1,4 @@
+import 'package:dart_learning_examples/classes/supers.dart';
 import 'package:dart_learning_examples/classes/user.dart';
 import 'package:dart_learning_examples/streams/stream.dart';
 import 'package:dart_learning_examples/streams/stream_controller.dart';
@@ -8,7 +9,18 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MainApp());
 
-  streamControllerExample();
+  var natasha = Creatures(10);
+  var abbas = Unicorn(12);
+  print(abbas.lifespan);
+  print(natasha.lifespan);
+
+  // var silverUnicorn = Unicorn().lifespan;
+  // print(silverUnicorn);
+
+  // var myCereal = Cereal(true);
+  // print(myCereal.isYummy);
+
+  // streamControllerExample();
 
   // iterableGenerateNumbersFunction();
 
