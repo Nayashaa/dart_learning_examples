@@ -102,3 +102,54 @@ class Bird implements Flyable {
     print('Bird lands.');
   }
 }
+
+// these are all the types of classes:
+
+// abstract
+// To define a class that doesn’t require a full, concrete implementation of its entire interface, use the abstract modifier.
+
+// Abstract classes cannot be constructed from any library, whether its own or an outside library. Abstract classes often have abstract methods.
+
+// Library a.dart
+abstract class Vehicle {
+  void moveForward(int meters);
+}
+
+// Error: Cannot be constructed
+// Vehicle myVehicle = Vehicle();
+
+// Can be extended
+class Car extends Vehicle {
+  int passengers = 4;
+  @override
+  void moveForward(int meters) {
+    // TODO: implement moveForward
+  }
+  // ···
+}
+
+// Can be implemented
+class MockVehicle implements Vehicle {
+  @override
+  void moveForward(int meters) {
+    // ...
+  }
+}
+
+
+// BASE
+//can be constructed, cant be inherited, can be extended. 
+
+// FINAL
+//can be constructed, cant be inherited or extended 
+
+// INTERFACE 
+//can be constructed, can be inherited, cant be extended. 
+
+// SEALED 
+// i dont understand this one. 
+
+// mixin
+// So essentially just like a parent class but like partial and not full.
+// - mixins themselves can have super classes, 
+// - they do not have constructors so i assume you cannot instansiate them on their own. Yes makes sense 

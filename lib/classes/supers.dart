@@ -55,7 +55,7 @@ class Cereal extends Food {
 //   Unicorn(isImortal) : super(imortal: isImortal);
 // }
 
-////////////////////////////
+//////////////////////////// PASSING VALUES UP
 
 // class Creatures {
 //   final int lifespan = 10;
@@ -66,10 +66,7 @@ class Cereal extends Food {
 //   const Unicorn(int lifespan) : super();
 // }
 
-////////////////////////
-///
-///
-///
+//////////////////////// THE DIFFERENT, SECRET SYNTAX
 
 class Creatures {
   int lifespan;

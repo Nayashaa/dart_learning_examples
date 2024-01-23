@@ -60,3 +60,54 @@ Future<String> writeAString() async {
   await Future.delayed(const Duration(seconds: 5));
   return "I am a string that is written";
 }
+
+//////////////////////
+///
+
+// void main() {
+//   // Create a stream of integers
+//   Stream<int> originalStream = Stream<int>.fromIterable([
+//     1,
+//     2,
+//     3,
+//     4,
+//     5
+//   ]);
+
+////////////// STREAM TO MAP
+
+//   // Use the map function to square each element in the stream
+//   Stream<int> squaredStream = originalStream.map((int value) => value * value);
+
+//   // Subscribe to the transformed stream and listen for events
+//   squaredStream.listen((int squaredValue) {
+//     print('Squared value: $squaredValue');
+//   });
+// }
+
+// Stream<int> squaredStream = countUp().map((int value) => value * value);
+
+///////////////// STREAM TO LiST
+
+// void main() async {
+//   // Create a stream of integers
+//   Stream<int> originalStream = Stream<int>.fromIterable([1, 2, 3, 4, 5]);
+
+//   // Use toList to collect the stream values into a list
+//   List<int> resultList = await originalStream.toList();
+
+//   // Print the collected list
+//   print('Result List: $resultList');
+// }
+
+// void main() {
+//   // Create a stream of integers
+
+//   // Use the where method to filter even numbers
+//   Stream<int> evenStream = originalStream.where((int number) => number % 2 == 0);
+
+//   // Subscribe to the filtered stream and listen for events
+//   evenStream.listen((int evenNumber) {
+//     print('Even number: $evenNumber');
+//   });
+// }

@@ -6,13 +6,43 @@ import 'package:dart_learning_examples/streams/widget_streams/stream_stateful_wi
 import 'package:dart_learning_examples/streams/widget_streams/stream_stateless_widgets.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(const MainApp());
 
-  var natasha = Creatures(10);
-  var abbas = Unicorn(12);
-  print(abbas.lifespan);
-  print(natasha.lifespan);
+  // List<int> resultList = await countUp().toList();
+  // print(resultList);
+
+  Stream<int> evenStream = countUp().where((int number) => number % 2 == 0);
+
+  evenStream.listen((event) {
+    print(event);
+  });
+
+  // List<int> countList = [];
+
+  // var countStream = countUp().map((event) => countList.add(event));
+
+  // print(countList);
+
+  // Stream<int> squaredStream = countUp().map((int value) => value * value);
+
+  // Stream<int> newStream = countUp().map((int value) => value);
+
+  // newStream.listen((event) {
+  //   print("$event");
+  // });
+
+  // squaredStream.listen((event) {
+  //   print("$event");
+  // });
+  // squaredStream.listen((int squaredValue) {
+  //   print('Squared value: $squaredValue');
+  // });
+
+  // var natasha = Creatures(10);
+  // var abbas = Unicorn(12);
+  // print(abbas.lifespan);
+  // print(natasha.lifespan);
 
   // var silverUnicorn = Unicorn().lifespan;
   // print(silverUnicorn);
@@ -41,7 +71,7 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Text(BlockedUser(template: Blocked(), name: "user").description),
-              const OneGeneratorWidget(),
+              // const OneGeneratorWidget(),
               CountDownWidget(),
               const CountUpWidget(),
               FutureBuilderExample(
