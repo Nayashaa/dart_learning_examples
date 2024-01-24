@@ -1,5 +1,6 @@
 import 'package:dart_learning_examples/classes/supers.dart';
 import 'package:dart_learning_examples/classes/user.dart';
+import 'package:dart_learning_examples/controllers/animated_controller.dart';
 import 'package:dart_learning_examples/streams/stream.dart';
 import 'package:dart_learning_examples/streams/stream_controller.dart';
 import 'package:dart_learning_examples/streams/widget_streams/stream_stateful_widgets.dart';
@@ -79,7 +80,8 @@ class MainApp extends StatelessWidget {
               ),
               MyWidget(
                 myWidgetKey: UniqueKey(),
-              )
+              ),
+              const AnimatedWidgetMINE()
             ],
           ),
         ),
